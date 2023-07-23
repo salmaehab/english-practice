@@ -9,8 +9,7 @@ function App() {
      <BrowserRouter >
         <Routes>
           <Route exact path="/" element={<Words />}/>
-          <Route  path="/rank" element={<Rank />} />
-           
+          <Route  path="/rank" element={<Rank />} /> 
         </Routes>
       </BrowserRouter>
         

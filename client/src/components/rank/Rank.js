@@ -16,11 +16,12 @@ function Rank() {
  
   return (
     <div className="root">
+    <div>
      <p>Rank: {rank} %</p>
      <Link to="/">
-        <button>Try again</button>
+        <button className="btn">Try again</button>
       </Link>
-
+    </div>
     </div>
   );
 }

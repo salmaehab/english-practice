@@ -78,7 +78,7 @@ function Words() {
   return (
     <div className="root">
       {current ? (
-        <div key={current.id}>
+        <div key={current.id} className="wrapper">
           {current.word}
           <div className="answers">
             {answers.map(answer => (
@@ -92,6 +92,16 @@ function Words() {
                 {answer.answer}
               </p>
             ))}
+          </div>
+         
+          <p>{feedback}</p>
+          <div className="progress-bar-wrapper">
+            <div className="progress-bar-title">
+              <p>Number of answered questions:</p>
+              </div>
+              <div className="progress-bar">
+              <Progress percent={Math.ceil(progressPercentage)} />
+              </div>
           </div>
           <div className="buttons">
             <button
@@ -109,13 +119,7 @@ function Words() {
               Next
             </button>
           </div>
-          <p>{feedback}</p>
-          <div className="progress-bar-wrapper">
-            <div className="progress-bar">
-              <p>Number of answered questions:</p>
-              <Progress percent={Math.ceil(progressPercentage)} />
-            </div>
-          </div>
+          {/*  */}
         </div>
       ) : (
         <></>
